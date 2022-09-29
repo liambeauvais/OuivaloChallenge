@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaireAPi</title>
+
+</head>
+<body>
+<h1 class="margin">Salutations Ouivalo!</h1>
+<form action="" method="get" class="form-example margin">
+    <div class="form-example margin">
+        <label for="email">mail: </label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div class="form-example margin">
+        <label for="date">date de l'essai: </label>
+        <input type="date" name="date" id="date" required>
+    </div>
+    <div class="form-example margin">
+        <label for="urlRelais">urlRelais: </label>
+        <input type="text" name="urlRelais" id="urlRelais" required>
+    </div>
+    <div class="form-example margin">
+        <label for="message">message: </label>
+        <input type="text" name="message" id="message" required>
+    </div>
+    <div class="form-example margin" style="display: flex; justify-content: center;">
+        <input class="button" type="submit" style="" value="Allez hop c'est parti!">
+    </div>
+</form>
+</body>
+</html>
+<style>
+    body{
+        width: 100%;
+    }
+    form, div, h1 {
+        width: 80%;
+    }
+
+    .margin {
+        padding: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    label, input, h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .button {
+        width: 150px;
+        background-color: blue;
+        color: white;
+        border: 1px blue solid;
+        border-radius: 16px;
+        height: 30px;
+    }
+    .button:hover{
+        background-color: lightgrey;
+        color:blue;
+    }
+</style>
