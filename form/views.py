@@ -4,13 +4,14 @@ from django.template import loader
 import requests
 
 
-def index(request, context=None):
+def index(request):
     template = loader.get_template("index.html")
-    message_sent = False
+    context = {"message": "Salutations, Ouivalo!"}
     if request.method == "POST":
         status = send_api(request)
         message_sent = True if status == 200 else False
-    context = {"message": "Envoi réussi!!" if message_sent else "Problème à l'envoi "}
+        context = {"message": "Envoi réussi!!" if message_sent else "Problème à l'envoi "}
+        return HttpResponse(template.render(context, request))
     return HttpResponse(template.render(context, request))
 
 
